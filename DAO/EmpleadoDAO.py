@@ -20,7 +20,7 @@ def validacion(correo_ingresado, contrasena_ingresada):
   cursor = mi_conexion.cursor()
 
   try:
-    sql = "SELECT correo, contrasena FROM Empleado WHERE correo = %s AND contrasena = %s"
+    sql = "SELECT correo, contrasena FROM empleado WHERE correo = %s AND contrasena = %s"
     # Aquí se usan los parámetros que recibe la función
     cursor.execute(sql, (correo_ingresado, contrasena_ingresada))
     resultado = cursor.fetchone()

@@ -7,6 +7,7 @@ sys.path.append(
 )
 
 from DAO.EmpleadoDAO import validacion
+from DAO.UsuarioDao import Registro
 
 
 def mostrar_menu():
@@ -40,7 +41,20 @@ if opcion == 1:
 
 elif opcion == 2:
   print("\n--- REGISTRO ---")
-  print("Aquí puedes implementar la lógica para registrarse.")
+
+  print("Ingrese lo siguientes datos")
+  
+  nombreRegistro = input("Ingrese su nombre: ")
+  direccionRegistro = input("Ingrese su direccion: ")
+  telefonoRegistro = input("Ingrese su numero telefonico: ")
+  correoRegistro = input("Ingrese su correo: ")
+
+  registro = Registro(nombreRegistro, direccionRegistro, telefonoRegistro, correoRegistro)
+
+  if registro:
+    print("Se registro con exito")
+  else:
+    print("Error!")
 
 else:
   print("\n Opción no válida. Intente nuevamente.")
