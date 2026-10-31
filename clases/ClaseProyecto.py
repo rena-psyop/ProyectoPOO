@@ -1,12 +1,17 @@
 class Proyecto():
 
-    def __init__(self, nombreProyecto: str, descripcion: str, fecha_inicio_Proyecto: str):
+    def __init__(self, nombreProyecto: str, descripcion: str, fecha_inicio_Proyecto: str, id: int = None):
         
+        self.__id = id
         self.nombreProyecto = nombreProyecto
         self.descripcion = descripcion
         self.fecha_inicio_Proyecto = fecha_inicio_Proyecto
 
     #----------------Getter-----------
+
+    @property
+    def get_id(self):
+        return self.__id
 
     @property
     def nombreProyecto(self) ->str:

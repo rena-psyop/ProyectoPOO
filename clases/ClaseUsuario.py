@@ -1,6 +1,7 @@
 class Usuario:
 
-    def __init__(self, nombre:str, direccion:str, telefono:str, correo:str):
+    def __init__(self, nombre:str, direccion:str, telefono:str, correo:str, id: int = None):
+        self.__id = id
         self.nombre = nombre
         self.direccion = direccion
         self.telefono = telefono
@@ -12,6 +13,10 @@ class Usuario:
 
 
     #---------------Property/getter-------------------
+    @property
+    def get_id(self):
+        return self.__id
+
     @property
     def nombre(self) -> str:
         return self._nombre

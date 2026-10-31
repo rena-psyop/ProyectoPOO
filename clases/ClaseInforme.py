@@ -1,10 +1,15 @@
 class Informe:
 
-    def __init__(self, tipo: str, fecha: str):
+    def __init__(self, tipo: str, fecha: str, id: int = None):
+        self.__id = id
         self.tipo = tipo
         self.fecha = fecha
 
     #----------------Getter-----------
+
+    @property
+    def get_id(self):
+        return self.__id
 
     @property
     def tipo(self) -> str:

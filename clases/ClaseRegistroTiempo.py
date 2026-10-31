@@ -1,11 +1,16 @@
 class RegistroTiempo:
 
-    def __init__(self, fecha: str, horas: str, descripcion: str):
+    def __init__(self, fecha: str, horas: str, descripcion: str, id: int = None):
+        self.__id = id
         self.fecha = fecha
         self.horas = horas
         self.descripcion = descripcion
 
     #----------------Getter-----------
+    @property
+    def get_id(self):
+        return self.__id
+
     @property
     def fecha(self) -> str:
         return self._fecha
